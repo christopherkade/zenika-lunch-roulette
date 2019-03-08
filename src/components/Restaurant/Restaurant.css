@@ -1,0 +1,55 @@
+.slider > h3 {
+    font-size: 3em;
+    font-weight: 200;
+}
+
+.slider {
+    border-bottom: 1px solid black;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.arrow-up {
+    position: absolute;
+    left: 48.5%;
+    width: 0; 
+    height: 0; 
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid black;
+}
+
+.restaurant-name {
+    font-size: 2em;
+}
+
+.button-stop {
+    padding: 17px 30px 16px 30px;
+    border-radius: 30px;
+    font-size: 1.5em;
+    margin-top: 80px;
+    margin-bottom: 200px;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.button-stop:focus {
+    outline: none;
+}
+
+.button-icon {
+    height: 50px;
+}
+
+/* $breakpoint-extra-large: 1690px;
+$breakpoint-large: 1280px;
+$breakpoint-medium: 1087px;
+$breakpoint-small: 769px;
+$breakpoint-extra-small: 480px; */
+
+@media only screen and (max-width: 1087px) {
+    .slider {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

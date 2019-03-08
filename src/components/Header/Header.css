@@ -1,0 +1,17 @@
+.logo {
+    transform: translateY(60px);
+    margin: 10px;
+    width: 150px;
+    align-self: center;
+}
+
+@media only screen and (max-width: 1087px) {
+    .logo {
+        width: 100px;
+        transform: translateY(40px);
+    }
+
+    .header > h1 {
+        font-size: 1.5em;
+    }
+}

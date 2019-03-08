@@ -1,0 +1,14 @@
+language: 'node_js'
+node_js: '8'
+before_script:
+- cp ./build/index.html ./build/404.html
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: build
+  repo: christopherkade/zenika-lunch-roulette
+  target_branch: gh-pages
+  on:
+    branch: master

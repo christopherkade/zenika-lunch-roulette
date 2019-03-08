@@ -1,0 +1,14 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+  height: 100%;
+  color: white;
+}
+
+html, #root {
+  height: 100%;
+}
