@@ -41,12 +41,6 @@
     height: 50px;
 }
 
-/* $breakpoint-extra-large: 1690px;
-$breakpoint-large: 1280px;
-$breakpoint-medium: 1087px;
-$breakpoint-small: 769px;
-$breakpoint-extra-small: 480px; */
-
 @media only screen and (max-width: 1087px) {
     .slider {
         margin-left: 20px;
