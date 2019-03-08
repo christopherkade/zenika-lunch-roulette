@@ -1,6 +1,6 @@
 # Zenika Lunch Roulette
 
-Don't know where to eat at Znk Paris? Use the ZLR ! :fork_and_knife:
+Don't know where to eat at Zenika Paris? Use the ZLR ! :fork_and_knife:
 
 
 ## Available Scripts
