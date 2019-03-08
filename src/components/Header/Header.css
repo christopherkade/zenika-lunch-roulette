@@ -5,6 +5,10 @@
     align-self: center;
 }
 
+.header > h1 {
+    margin: 0;
+}
+
 @media only screen and (max-width: 1087px) {
     .logo {
         width: 100px;

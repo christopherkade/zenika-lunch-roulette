@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Restaurant from './components/Restaurant/Restaurant'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import './App.css';
 
 import Prismic from 'prismic-javascript'
@@ -23,7 +24,7 @@ class App extends Component {
     while (array.length !== 0) {
       let randomIndex = Math.floor(Math.random() * array.length)
       newArray.push(array[randomIndex])
-      array.splice(randomIndex, 1)    
+      array.splice(randomIndex, 1)
     }
 
     this.setState({
@@ -45,9 +46,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">        
+      <div className="App">
         <Header />
-        <Restaurant restaurants={this.state.restaurants} />
+        <Restaurant className="restaurant" restaurants={this.state.restaurants} />
+        <Footer />
       </div>
     );
   }

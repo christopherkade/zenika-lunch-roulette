@@ -1,0 +1,16 @@
+.details-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.detail-element {
+    font-size: 2em;
+    width: 100%;
+}
+
+.maps-icon {
+    width: 100px;
+    height: 100px;
+}

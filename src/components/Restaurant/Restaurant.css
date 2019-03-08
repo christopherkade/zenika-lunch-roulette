@@ -1,5 +1,9 @@
+.restaurant-wrapper {
+    margin-top: 80px;
+}
+
 .restaurant-name {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: lighter;
 }
 
@@ -27,5 +31,9 @@
 
     .arrow-up {
         left: 44%;
+    }
+
+    .restaurant-name {
+        font-size: 2em;
     }
 }

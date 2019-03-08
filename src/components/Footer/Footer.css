@@ -1,0 +1,14 @@
+.footer-wrapper > h3 {
+    font-weight: lighter;
+    font-size: 1em;
+}
+
+.footer-link {
+    text-decoration: none;    
+    color: black;
+    font-size: 1.2em;
+}
+
+.footer-link:hover {
+    opacity: .5;
+}

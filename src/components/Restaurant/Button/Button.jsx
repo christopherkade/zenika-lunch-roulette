@@ -2,16 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 import iconFork from './fork.svg'
-import iconRestart from './restart.svg'
 
 import './Button.css'
 
 function Button(props) {
-  const buttonIcon = props.isRunning ? iconFork : iconRestart
+  if (!props.isRunning) {
+    return null
+  }
 
   return (
     <button className="button-stop" onClick={props.handleClick}>
-      <img className="button-icon" src={buttonIcon} alt="forkIcon" />
+      <img className="button-icon" src={iconFork} alt="forkIcon" />
     </button>
   )
 }
