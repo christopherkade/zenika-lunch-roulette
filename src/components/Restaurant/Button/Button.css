@@ -1,0 +1,21 @@
+.button-stop {
+    padding: 17px 30px 16px 30px;
+    border-radius: 30px;
+    font-size: 1.5em;
+    margin-top: 80px;
+    margin-bottom: 200px;
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+.button-stop:focus {
+    outline: none;
+}
+
+.button-stop:hover {
+    cursor: pointer;
+}
+
+.button-icon {
+    height: 50px;
+}

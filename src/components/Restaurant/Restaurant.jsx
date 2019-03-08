@@ -1,8 +1,8 @@
 import React from 'react'
-import Slider from "react-slick";
+import Slider from 'react-slick'
+import PropTypes from 'prop-types'
 
-import iconFork from './fork.svg'
-import iconRestart from './restart.svg'
+import Button from './Button/Button'
 
 import './Restaurant.css'
 
@@ -10,24 +10,22 @@ class Restaurant extends React.Component {
   constructor() {
     super()
     this.state = {
-      isRunning: false
+      isRunning: true
     }
-  }  
+  }
 
   /**
    * Runs and stop the slider
    */
-  handleClick = () => {  
-    this.state.isRunning ?  this.slider.slickPlay() : this.slider.slickPause();
-    
+  handleClick = () => {
+    this.state.isRunning ? this.slider.slickPause() : this.slider.slickPlay();
+
     this.setState({
       isRunning: !this.state.isRunning
     })
   }
 
   render() {
-    const buttonIcon = this.state.isRunning ? iconRestart : iconFork
-    
     const settings = {
       infinite: true,
       speed: 150,
@@ -50,12 +48,15 @@ class Restaurant extends React.Component {
           })}
         </Slider>
         <div className="arrow-up"></div>
-        <button className="button-stop" onClick={this.handleClick}>        
-          <img className="button-icon" src={buttonIcon} alt="forkIcon" />
-        </button>
+
+        <Button isRunning={this.state.isRunning} handleClick={this.handleClick} />
       </div>
     )
-  }  
+  }
+}
+
+Restaurant.propTypes = {
+  restaurants: PropTypes.array
 }
 
 export default Restaurant

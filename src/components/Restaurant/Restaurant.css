@@ -19,24 +19,6 @@
     border-bottom: 25px solid black;
 }
 
-.button-stop {
-    padding: 17px 30px 16px 30px;
-    border-radius: 30px;
-    font-size: 1.5em;
-    margin-top: 80px;
-    margin-bottom: 200px;
-    background-color: transparent;
-    border: 1px solid black;
-}
-
-.button-stop:focus {
-    outline: none;
-}
-
-.button-icon {
-    height: 50px;
-}
-
 @media only screen and (max-width: 400px) {
     .slider {
         margin-left: 20px;
