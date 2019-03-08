@@ -1,6 +1,6 @@
-.slider > h3 {
+.restaurant-name {
     font-size: 3em;
-    font-weight: 200;
+    font-weight: lighter;
 }
 
 .slider {
@@ -19,10 +19,6 @@
     border-bottom: 25px solid black;
 }
 
-.restaurant-name {
-    font-size: 2em;
-}
-
 .button-stop {
     padding: 17px 30px 16px 30px;
     border-radius: 30px;
@@ -30,7 +26,7 @@
     margin-top: 80px;
     margin-bottom: 200px;
     background-color: transparent;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .button-stop:focus {
@@ -41,9 +37,13 @@
     height: 50px;
 }
 
-@media only screen and (max-width: 1087px) {
+@media only screen and (max-width: 400px) {
     .slider {
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    .arrow-up {
+        left: 44%;
     }
 }
