@@ -13,6 +13,7 @@
 
 .button-stop:hover {
     cursor: pointer;
+    opacity: .7;
 }
 
 .button-icon {

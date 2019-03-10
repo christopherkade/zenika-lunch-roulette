@@ -17,7 +17,7 @@ function Details(props) {
           <img className="maps-icon" src={MapsIcon} alt="Google Maps icon" />
         </a>
       </div>
-      <div className="play-again" onClick={props.handleClick}>Pas convaincu? <span role="img" aria-label="Replay">🔄</span></div>
+      <div className="play-again" onClick={props.handleClick}>Pas convaincu? <span role="img" aria-label="Play Again">🔄</span></div>
     </div>
   )
 }

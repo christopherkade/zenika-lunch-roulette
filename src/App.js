@@ -21,6 +21,7 @@ class App extends Component {
    */
   shuffleArray(array) {
     let newArray = []
+
     while (array.length !== 0) {
       let randomIndex = Math.floor(Math.random() * array.length)
       newArray.push(array[randomIndex])
@@ -48,7 +49,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Restaurant className="restaurant" restaurants={this.state.restaurants} />
+        {this.state.restaurants.length > 0 ? <Restaurant restaurants={this.state.restaurants} /> : null}
         <Footer />
       </div>
     );

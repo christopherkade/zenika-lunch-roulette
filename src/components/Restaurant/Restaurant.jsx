@@ -12,28 +12,36 @@ class Restaurant extends React.Component {
     super()
     this.state = {
       isRunning: true,
-      selectedRestaurant: {},
+      selectedRestaurant: null
     }
   }
 
+  /**
+   * Called when the slider selects a new restaurant
+   * Sets the selected restaurant in our state
+   * @param {*} index - Index of the currently selected restaurant
+   */
   updateRestaurant(index) {
     if (!this.props.restaurants[index]) return
+
     const { title, type, price, maps_url } = this.props.restaurants[index];
 
-    const restaurant = {
-      title: title[0] ? title[0].text : "",
-      type: type[0] ? type[0].text : "",
-      price: price,
-      maps_url: maps_url.url,
-    }
-
-    this.setState({ selectedRestaurant: restaurant })
+    this.setState({
+      selectedRestaurant: {
+        title: title[0] ? title[0].text : "",
+        type: type[0] ? type[0].text : "",
+        price: price,
+        maps_url: maps_url.url
+      }
+    })
   }
 
   /**
    * Runs and stop the slider
    */
   handleClick = () => {
+    if (!this.state.selectedRestaurant) return;
+
     this.state.isRunning ? this.slider.slickPause() : this.slider.slickPlay();
 
     this.setState({
@@ -47,6 +55,7 @@ class Restaurant extends React.Component {
       speed: 150,
       autoplay: true,
       autoplaySpeed: 100,
+      draggable: false,
       pauseOnHover: false,
       arrows: false,
       beforeChange: (_, next) => this.updateRestaurant(next)
@@ -64,8 +73,8 @@ class Restaurant extends React.Component {
             )
           })}
         </Slider>
-        <div className="arrow-up"></div>
-        <Button isRunning={this.state.isRunning} handleClick={this.handleClick} />
+        <div className="arrow-up" />
+        {this.state.isRunning ? <Button isRunning={this.state.isRunning} handleClick={this.handleClick} /> : null}
         {!this.state.isRunning ? <Details details={this.state.selectedRestaurant} handleClick={this.handleClick} /> : null}
       </div>
     )

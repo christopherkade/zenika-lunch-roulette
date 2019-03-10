@@ -6,10 +6,6 @@ import iconFork from './fork.svg'
 import './Button.css'
 
 function Button(props) {
-  if (!props.isRunning) {
-    return null
-  }
-
   return (
     <button className="button-stop" onClick={props.handleClick}>
       <img className="button-icon" src={iconFork} alt="forkIcon" />
