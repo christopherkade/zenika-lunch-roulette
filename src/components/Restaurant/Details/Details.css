@@ -14,3 +14,24 @@
     width: 100px;
     height: 100px;
 }
+
+.play-again {
+    margin-top: 40px;
+    font-size: 1.5em;
+}
+
+.play-again:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+@media only screen and (max-width: 400px) {
+    .detail-element {
+        font-size: 1.5em;
+    }
+
+    .maps-icon { 
+        width: 60px;
+        height: 60px;
+    }
+}

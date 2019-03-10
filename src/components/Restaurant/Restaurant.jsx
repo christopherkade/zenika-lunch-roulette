@@ -66,7 +66,7 @@ class Restaurant extends React.Component {
         </Slider>
         <div className="arrow-up"></div>
         <Button isRunning={this.state.isRunning} handleClick={this.handleClick} />
-        {!this.state.isRunning ? <Details details={this.state.selectedRestaurant} /> : <div></div>}
+        {!this.state.isRunning ? <Details details={this.state.selectedRestaurant} handleClick={this.handleClick} /> : null}
       </div>
     )
   }
