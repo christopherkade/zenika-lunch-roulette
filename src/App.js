@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
-import Restaurant from './components/Restaurant/Restaurant'
 import Header from './components/Header/Header'
+import Restaurant from './components/Restaurant/Restaurant'
+import Spinner from './components/Spinner/Spinner'
 import Footer from './components/Footer/Footer'
+
 import './App.css';
 
 import Prismic from 'prismic-javascript'
@@ -11,7 +13,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      restaurants: []
+      restaurants: null
     }
   }
 
@@ -28,9 +30,7 @@ class App extends Component {
       array.splice(randomIndex, 1)
     }
 
-    this.setState({
-      restaurants: newArray
-    })
+    return newArray
   }
 
   /**
@@ -41,7 +41,11 @@ class App extends Component {
       return api.query(Prismic.Predicates.at('document.type', 'restaurant'));
     }).then((response) => {
       const restaurantData = response.results.map((res) => res.data)
-      this.shuffleArray(restaurantData)
+
+      // Shuffle the array and set it in our state
+      this.setState({
+        restaurants: this.shuffleArray(restaurantData)
+      })
     })
   }
 
@@ -49,7 +53,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        {this.state.restaurants.length > 0 ? <Restaurant restaurants={this.state.restaurants} /> : null}
+        {this.state.restaurants ? <Restaurant restaurants={this.state.restaurants} /> : <Spinner />}
         <Footer />
       </div>
     );

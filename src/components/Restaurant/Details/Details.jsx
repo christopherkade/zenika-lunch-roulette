@@ -6,6 +6,8 @@ import MapsIcon from './google.svg'
 import './Details.css'
 
 function Details(props) {
+  if (props.isRunning) return null
+
   const price = Array(parseInt(props.details.price)).fill('💰')
 
   return (
@@ -22,12 +24,10 @@ function Details(props) {
   )
 }
 
-Details.propsType = {
-  details: PropTypes.shape({
-    type: PropTypes.string,
-    price: PropTypes.number,
-    maps_url: PropTypes.string
-  })
+Details.propTypes = {
+  isRunning: PropTypes.bool,
+  handleClick: PropTypes.func.isRequired,
+  details: PropTypes.object
 }
 
 export default Details
