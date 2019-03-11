@@ -58,6 +58,7 @@ class Restaurant extends React.Component {
       draggable: false,
       pauseOnHover: false,
       arrows: false,
+      accessibility: false,
       beforeChange: (_, next) => this.updateRestaurant(next)
     }
 
